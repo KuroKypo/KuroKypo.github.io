@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="shortcut icon" href="/convert/assets/favicon-Bfod-rsk.ico" type="image/x-icon">
+  <title>KCA</title>
+  <meta name="theme-color" content="#11131a">
+  <script type="module" crossorigin src="/convert/assets/index-DF1pz4EO.js"></script>
+  <link rel="stylesheet" crossorigin href="/convert/assets/index-C1A453hN.css">
+</head>
+<body data-theme="dark">
+  <input id="file-input" type="file" multiple>
+  <input id="folder-input" type="file" multiple webkitdirectory directory>
+  <input id="preference-import" type="file" accept="application/json">
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="icon-panel-left" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18M15 9l-3 3 3 3"/></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="icon-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01Z"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 17v5M5 17h14M6 3h12l-2 8 3 3H5l3-3Z"/></symbol>
+    <symbol id="icon-convert" viewBox="0 0 24 24"><path d="m16 3 4 4-4 4M4 7h16M8 21l-4-4 4-4M20 17H4"/></symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.8 1.8 0 0 0 .36 1.98l.06.06-2.78 2.78-.06-.06A1.8 1.8 0 0 0 15 19.4a1.8 1.8 0 0 0-1 .6v.08h-4V20a1.8 1.8 0 0 0-1-.6 1.8 1.8 0 0 0-1.98.36l-.06.06-2.78-2.78.06-.06A1.8 1.8 0 0 0 4.6 15a1.8 1.8 0 0 0-.6-1h-.08v-4H4a1.8 1.8 0 0 0 .6-1 1.8 1.8 0 0 0-.36-1.98l-.06-.06 2.78-2.78.06.06A1.8 1.8 0 0 0 9 4.6a1.8 1.8 0 0 0 1-.6v-.08h4V4a1.8 1.8 0 0 0 1 .6 1.8 1.8 0 0 0 1.98-.36l.06-.06 2.78 2.78-.06.06A1.8 1.8 0 0 0 19.4 9a1.8 1.8 0 0 0 .6 1h.08v4H20a1.8 1.8 0 0 0-.6 1Z"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="icon-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-4.5-4.5L5 21"/></symbol>
+    <symbol id="icon-video" viewBox="0 0 24 24"><path d="m16 13 5 3V8l-5 3"/><rect width="13" height="14" x="3" y="5" rx="2"/></symbol>
+    <symbol id="icon-audio" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="icon-document" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></symbol>
+    <symbol id="icon-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.66 3.58 3 8 3s8-1.34 8-3V5M4 12v7c0 1.66 3.58 3 8 3s8-1.34 8-3v-7"/></symbol>
+    <symbol id="icon-archive" viewBox="0 0 24 24"><path d="M3 5h18v4H3zM5 9v11h14V9M10 13h4"/></symbol>
+    <symbol id="icon-font" viewBox="0 0 24 24"><path d="M4 19 10 5h4l6 14M7 14h10"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14"/></symbol>
+    <symbol id="icon-cube" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9ZM4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="icon-discord" viewBox="0 0 24 24"><path d="M8 7a14 14 0 0 1 8 0l1 2c2 1 3 3 3 7-2 2-4 3-6 3l-1-2h-2l-1 2c-2 0-4-1-6-3 0-4 1-6 3-7Z"/><path d="M9 13h.01M15 13h.01"/></symbol>
+  </svg>
+  <div class="background-effects" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">KCA</div>
+      <div class="brand-copy">
+        <strong>KCA</strong>
+        <span>Local conversion studio</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <button class="nav-item active" data-view="convert"><svg class="ui-icon"><use href="#icon-convert"></use></svg><span class="nav-label">Convert</span></button>
+      <button class="nav-item" data-view="categories"><svg class="ui-icon"><use href="#icon-grid"></use></svg><span class="nav-label">Categories</span></button>
+      <button class="nav-item" data-view="favorites"><svg class="ui-icon"><use href="#icon-star"></use></svg><span class="nav-label">Favorites</span></button>
+      <button class="nav-item" data-view="pinned"><svg class="ui-icon"><use href="#icon-pin"></use></svg><span class="nav-label">Pinned</span></button>
+      <button class="nav-item" data-view="settings"><svg class="ui-icon"><use href="#icon-settings"></use></svg><span class="nav-label">Settings</span></button>
+      <button class="nav-item" data-view="about"><svg class="ui-icon"><use href="#icon-info"></use></svg><span class="nav-label">About</span></button>
+    </nav>
+    <button id="sidebar-collapse" class="sidebar-collapse" aria-label="Collapse sidebar" title="Collapse sidebar"><svg class="ui-icon"><use href="#icon-panel-left"></use></svg></button>
+    <div class="sidebar-footer">
+      <a id="commit-id" href="https://github.com/p2r3/convert" target="_blank" rel="noreferrer"></a>
+      <span>Private. Local. Flexible.</span>
+    </div>
+  </aside>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <button id="sidebar-toggle" class="icon-button mobile-only" aria-label="Toggle navigation"><svg class="ui-icon"><use href="#icon-menu"></use></svg></button>
+      <div>
+        <p id="view-eyebrow" class="eyebrow">Universal converter</p>
+        <h1 id="view-title">Convert anything</h1>
+      </div>
+      <div class="topbar-actions">
+        <button id="mode-button" class="quiet-button">Advanced mode</button>
+        <button id="theme-button" class="icon-button" aria-label="Toggle theme"><svg class="ui-icon"><use href="#icon-sun"></use></svg></button>
+        <button id="discord-button" class="discord-button"><svg class="ui-icon"><use href="#icon-discord"></use></svg>Discord</button>
+      </div>
+    </header>
+
+    <section id="view-convert" class="view active">
+      <div id="file-area" class="drop-zone" role="button" tabindex="0" aria-label="Choose files or drop them here">
+        <span class="drop-zone-icon"><svg class="ui-icon"><use href="#icon-plus"></use></svg></span>
+        <span id="file-area-title" class="drop-zone-title">Drop anything here</span>
+        <span id="drop-hint-text" class="drop-zone-copy">Files stay on this device while KCA finds a route.</span>
+        <span class="drop-zone-actions">
+          <button id="choose-files" class="primary-button" type="button">Choose files</button>
+          <button id="choose-folder" class="quiet-button" type="button"><svg class="ui-icon"><use href="#icon-folder"></use></svg>Choose folder</button>
+        </span>
+        <small>Shortcuts: Ctrl+O files, Ctrl+Shift+O folder, Ctrl+, settings</small>
+      </div>
+      <div id="file-summary" class="file-summary" hidden></div>
+
+      <section id="saved-shortcuts" class="saved-shortcuts" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your workspace</p>
+            <h2>Saved outputs</h2>
+          </div>
+          <p>Pinned formats stay first. Favorites follow.</p>
+        </div>
+        <div id="saved-shortcut-list" class="mini-card-grid"></div>
+      </section>
+
+      <div class="picker-grid">
+        <section class="picker-panel">
+          <div class="panel-heading">
+            <span class="step-number">01</span>
+            <div>
+              <p class="eyebrow">Source</p>
+              <h2>Input format</h2>
+            </div>
+          </div>
+          <label class="search-box">
+            <span>Search</span>
+            <input type="search" id="search-from" placeholder="PNG, document, audio..." autocomplete="off">
+          </label>
+          <div id="from-categories" class="category-tabs" aria-label="Input categories"></div>
+          <div id="from-list" class="format-list"></div>
+        </section>
+
+        <section class="picker-panel">
+          <div class="panel-heading">
+            <span class="step-number">02</span>
+            <div>
+              <p class="eyebrow">Destination</p>
+              <h2>Output format</h2>
+            </div>
+          </div>
+          <label class="search-box">
+            <span>Search</span>
+            <input type="search" id="search-to" placeholder="PDF, MP3, archive..." autocomplete="off">
+          </label>
+          <div id="to-categories" class="category-tabs" aria-label="Output categories"></div>
+          <div id="to-list" class="format-list"></div>
+        </section>
+      </div>
+
+      <section class="action-dock">
+        <div>
+          <p class="eyebrow">Ready when you are</p>
+          <strong id="conversion-summary">Choose a file and two formats</strong>
+        </div>
+        <div class="action-row">
+          <button id="clear-button" class="quiet-button">Clear</button>
+          <button id="convert-button" class="primary-button" disabled>Convert</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="view-categories" class="view">
+      <div class="section-heading page-heading">
+        <div>
+          <p class="eyebrow">Format browser</p>
+          <h2>Browse available outputs</h2>
+        </div>
+        <p>Every card below is generated from an active conversion handler.</p>
+      </div>
+      <label class="search-box catalog-search">
+        <span>Search</span>
+        <input type="search" id="catalog-search" placeholder="Search formats, MIME types, categories..." autocomplete="off">
+      </label>
+      <div id="catalog-categories" class="category-grid"></div>
+      <div id="catalog-list" class="catalog-grid"></div>
+    </section>
+
+    <section id="view-favorites" class="view">
+      <div class="section-heading page-heading">
+        <div>
+          <p class="eyebrow">Saved collection</p>
+          <h2>Favorites</h2>
+        </div>
+        <p>Star formats to keep your regular destinations close.</p>
+      </div>
+      <div id="favorites-list" class="catalog-grid"></div>
+    </section>
+
+    <section id="view-pinned" class="view">
+      <div class="section-heading page-heading">
+        <div>
+          <p class="eyebrow">Priority formats</p>
+          <h2>Pinned</h2>
+        </div>
+        <p>Pinned formats always sort above the rest of the list.</p>
+      </div>
+      <div id="pinned-list" class="catalog-grid"></div>
+    </section>
+
+    <section id="view-settings" class="view">
+      <div class="section-heading page-heading">
+        <div>
+          <p class="eyebrow">Local preferences</p>
+          <h2>Settings</h2>
+        </div>
+        <p>Your choices stay on this device. No account is required.</p>
+      </div>
+      <div class="settings-grid">
+        <section class="settings-card">
+          <h3>Appearance</h3>
+          <label class="switch-row"><span><strong>Light theme</strong><small>Switch between graphite and light surfaces.</small></span><input id="setting-theme" type="checkbox"></label>
+          <label class="switch-row"><span><strong>Compact lists</strong><small>Show more formats in the same space.</small></span><input id="setting-compact" type="checkbox"></label>
+          <label class="switch-row"><span><strong>Category descriptions</strong><small>Keep helper text visible in the browser.</small></span><input id="setting-descriptions" type="checkbox"></label>
+          <label class="switch-row"><span><strong>Uncommon formats</strong><small>Keep specialist and experimental formats visible.</small></span><input id="setting-experimental" type="checkbox"></label>
+          <label class="switch-row"><span><strong>Discord shortcut</strong><small>Show the contact action in the top bar.</small></span><input id="setting-discord" type="checkbox"></label>
+          <label class="switch-row"><span><strong>Animations</strong><small>Use subtle interface motion.</small></span><input id="setting-animations" type="checkbox"></label>
+          <label class="switch-row"><span><strong>Background effects</strong><small>Show the soft ambient shapes behind panels.</small></span><input id="setting-background" type="checkbox"></label>
+          <label class="switch-row"><span><strong>Collapsed sidebar</strong><small>Keep only navigation icons visible.</small></span><input id="setting-sidebar" type="checkbox"></label>
+        </section>
+        <section class="settings-card">
+          <h3>Favorites and pins</h3>
+          <p>Export a backup or clear your saved organization.</p>
+          <div class="button-stack">
+            <button id="export-preferences" class="quiet-button">Export preferences</button>
+            <button id="import-preferences" class="quiet-button">Import preferences</button>
+            <button id="clear-favorites" class="quiet-button">Clear favorites</button>
+            <button id="clear-pinned" class="quiet-button">Clear pinned items</button>
+            <button id="reset-pinned-order" class="quiet-button">Reset pinned order</button>
+            <button id="reset-preferences" class="danger-button">Reset all preferences</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="view-about" class="view">
+      <div class="about-card">
+        <p class="eyebrow">About</p>
+        <h2>KCA</h2>
+        <p><strong>Kypo Convert App</strong> is a private desktop conversion studio powered by the open-source Convert to it! engine. Files remain on your device while the app searches for direct or multi-step conversion routes.</p>
+        <button class="discord-button open-discord-modal"><svg class="ui-icon"><use href="#icon-discord"></use></svg>Contact me on Discord</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="popup-bg" class="overlay"></div>
+  <div id="popup" class="modal popup-modal">
+    <h2>Loading tools...</h2>
+  </div>
+
+  <div id="modal-bg" class="overlay" hidden></div>
+  <section id="app-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <button id="modal-close" class="modal-close" aria-label="Close dialog">Close</button>
+    <div id="modal-content"></div>
+  </section>
+
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+</body>
+</html>
